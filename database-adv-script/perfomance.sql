@@ -1,4 +1,6 @@
 -- Initial query to retrieve all bookings with associated user, property, and payment details
+-- Use EXPLAIN to analyze the query performance
+EXPLAIN 
 SELECT 
     b.booking_id,
     b.start_date,
@@ -25,4 +27,9 @@ JOIN
 JOIN 
     Property p ON b.property_id = p.property_id
 LEFT JOIN 
-    Payment pay ON b.booking_id = pay.booking_id;
+    Payment pay ON pay.booking_id = b.booking_id
+WHERE 
+    b.status = 'confirmed' 
+    AND p.location = 'Mombasa'
+    AND pay.payment_method = 'credit_card';
+

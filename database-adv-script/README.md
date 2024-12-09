@@ -37,3 +37,17 @@ Identify high-usage columns in your User, Booking, and Property tables (e.g., co
 Write SQL CREATE INDEX commands to create appropriate indexes for those columns and save them on database_index.sql
 
 Measure the query performance before and after adding indexes using EXPLAIN or ANALYZE.
+
+Task 4:
+Objective: Refactor complex queries to improve performance.
+
+Instructions:
+
+Write an initial query that retrieves all bookings along with the user details, property details, and payment details and save it on perfomance.sql
+
+Analyze the query’s performance using EXPLAIN and identify any inefficiencies.
+
+Refactor the query to reduce execution time, such as reducing unnecessary joins or using indexing.
+
+Task 5:
+
