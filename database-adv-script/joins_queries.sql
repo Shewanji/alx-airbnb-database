@@ -30,7 +30,21 @@ FROM
 LEFT JOIN 
     Review r
 ON 
-    p.property_id = r.property_id;
+    p.property_id = r.property_id;SELECT
+    p.property_id AS property_id,
+    p.name AS property_name,
+    p.location AS property_location,
+    r.review_id AS review_id,
+    r.rating AS review_rating,
+    r.comment AS review_comment
+FROM 
+    Property p
+LEFT JOIN 
+    Review r
+ON 
+    p.property_id = r.property_id
+ORDER BY 
+    p.name ASC; 
 
 -- FULL OUTER JOIN to retrieve all users and all bookings, even if the user has no booking or a booking is not linked to a user
 SELECT
